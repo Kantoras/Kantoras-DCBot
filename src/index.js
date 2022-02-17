@@ -11,12 +11,3 @@ client.once("ready", () => {
 
 client.login(process.env.DISCORD_BOT_TOKEN)
 
-
-bot.on('message', message => {
-    // ping command without a prefix (exact match)
-    if (message.content === 'ping') {
-        const delay = Date.now() - message.createdAt
-        message.reply(`**pong** *(delay: ${delay}ms)*`)
-        return
-    }
-})    
